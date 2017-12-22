@@ -23,6 +23,7 @@
             android:textSize="18sp" />
 
         <android.support.constraint.ConstraintLayout
+            android:id="@+id/billcon"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.01"

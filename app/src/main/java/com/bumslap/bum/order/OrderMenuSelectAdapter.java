@@ -65,7 +65,7 @@ public class OrderMenuSelectAdapter extends RecyclerView.Adapter<OrderMenuViewHo
         MenunameDB = dBforAnalysis.getMenuName(Integer.parseInt(menuitem.getOrder_FK_menuId()));
 
         holder.Menuname.setText(MenunameDB);
-
+        holder.MenuId.setText(menuitem.getOrder_FK_menuId());
         holder.MenuAmount.setText(menuitem.getOrder_amount());
 
     }
@@ -79,10 +79,11 @@ public class OrderMenuSelectAdapter extends RecyclerView.Adapter<OrderMenuViewHo
 
 class OrderMenuViewHoler extends RecyclerView.ViewHolder{
 
-    public TextView Menuname, MenuAmount;
+    public TextView Menuname, MenuAmount, MenuId;
 
     public OrderMenuViewHoler(View OrderitemView){
         super(OrderitemView);
+        MenuId = (TextView)OrderitemView.findViewById(R.id.ordermenuID);
         Menuname = (TextView)OrderitemView.findViewById(R.id.ordermenuname);
         MenuAmount = (TextView)OrderitemView.findViewById(R.id.ordermenuamount);
 
